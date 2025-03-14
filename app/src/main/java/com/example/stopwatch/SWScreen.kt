@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -69,11 +67,15 @@ fun SWScreen(viewModel: SWViewModel) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (lapList.isNotEmpty()){
                 for (lap in lapList){
-                    Text(lap)
+                    Text("Lap ${lapList.indexOf(lap) + 1}: $lap")
+                }
+                Button(onClick = {lapList.clear()}) {
+                    Text("CLEAR LAPS")
                 }
             }
         }
