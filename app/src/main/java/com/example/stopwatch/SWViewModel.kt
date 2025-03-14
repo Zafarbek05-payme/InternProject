@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 class SWViewModel : ViewModel() {
@@ -15,6 +16,7 @@ class SWViewModel : ViewModel() {
 
     var time = mutableStateOf("00:00:00")
     var isRunning = mutableStateOf(false)
+    var lapsList = MutableStateFlow<MutableList<String>>(mutableListOf())
 
     fun start(){
         if (!isRunning.value) {
@@ -40,6 +42,13 @@ class SWViewModel : ViewModel() {
         task?.cancel()
         elapsedTime = 0
         time.value = "00:00:00"
+    }
+
+    fun addLap() {
+        if (isRunning.value){
+            val lapTime = System.currentTimeMillis() - startTime
+            lapsList.value.add(formatTime(lapTime))
+        }
     }
 
     @SuppressLint("DefaultLocale")
