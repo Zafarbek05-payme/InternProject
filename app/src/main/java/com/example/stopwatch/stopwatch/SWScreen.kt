@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.stopwatch
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,9 +19,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun SWScreen(viewModel: SWViewModel) {
+fun SWScreen(viewModel: SWViewModel = viewModel()) {
     val time by viewModel.time
     val isRunning by viewModel.isRunning
     val lapList by viewModel.lapsList.collectAsState()
