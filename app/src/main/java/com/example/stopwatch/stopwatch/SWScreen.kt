@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun SWScreen(viewModel: SWViewModel = viewModel()) {
+fun SWScreen(viewModel: SWViewModel) {
     val time by viewModel.time
     val isRunning by viewModel.isRunning
     val lapList by viewModel.lapsList.collectAsState()
