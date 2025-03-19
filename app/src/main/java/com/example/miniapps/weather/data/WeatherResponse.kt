@@ -1,4 +1,4 @@
-package com.example.stopwatch.weather.data
+package com.example.miniapps.weather.data
 
 data class WeatherResponse(
     val weather: List<Weather>,

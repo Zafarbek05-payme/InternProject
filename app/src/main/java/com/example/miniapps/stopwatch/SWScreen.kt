@@ -1,4 +1,4 @@
-package com.example.stopwatch.stopwatch
+package com.example.miniapps.stopwatch
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -80,12 +80,5 @@ fun SWScreen(viewModel: SWViewModel) {
                 }
             }
         }
-
-//            LazyColumn(modifier = Modifier.fillMaxWidth()) {
-//                items(lapList){ lap ->
-//                    Text(lap)
-//                }
-//            }
-
     }
 }

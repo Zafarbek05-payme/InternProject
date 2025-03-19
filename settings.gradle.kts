@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Stopwatch"
+rootProject.name = "Mini Apps"
 include(":app")

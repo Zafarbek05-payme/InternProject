@@ -1,4 +1,4 @@
-package com.example.stopwatch.weather.data
+package com.example.miniapps.weather.data
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,4 +1,4 @@
-package com.example.stopwatch.stopwatch.theme
+package com.example.miniapps.stopwatch.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

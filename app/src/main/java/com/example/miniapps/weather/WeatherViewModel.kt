@@ -1,11 +1,11 @@
-package com.example.stopwatch.weather
+package com.example.miniapps.weather
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.stopwatch.weather.data.RetrofitInstance
-import com.example.stopwatch.weather.data.WeatherResponse
+import com.example.miniapps.weather.data.RetrofitInstance
+import com.example.miniapps.weather.data.WeatherResponse
 import kotlinx.coroutines.launch
 
 class WeatherViewModel : ViewModel() {

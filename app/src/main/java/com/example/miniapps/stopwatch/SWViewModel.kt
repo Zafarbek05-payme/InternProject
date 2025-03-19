@@ -1,4 +1,4 @@
-package com.example.stopwatch.stopwatch
+package com.example.miniapps.stopwatch
 
 import android.annotation.SuppressLint
 import androidx.compose.runtime.mutableStateOf

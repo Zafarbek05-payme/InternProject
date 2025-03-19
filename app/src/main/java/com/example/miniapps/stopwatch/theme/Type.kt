@@ -1,4 +1,4 @@
-package com.example.stopwatch.stopwatch.theme
+package com.example.miniapps.stopwatch.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

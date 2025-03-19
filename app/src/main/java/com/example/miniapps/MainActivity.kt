@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.miniapps
 
 //noinspection UsingMaterialAndMaterial3Libraries
 import android.os.Bundle
@@ -22,12 +22,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.stopwatch.stopwatch.SWScreen
-import com.example.stopwatch.stopwatch.SWViewModel
-import com.example.stopwatch.ui.AppDrawer
-import com.example.stopwatch.weather.WeatherScreen
-import com.example.stopwatch.weather.WeatherViewModel
-import com.example.stopwatch.weather.navigation.MenuItem
+import com.example.miniapps.stopwatch.SWScreen
+import com.example.miniapps.stopwatch.SWViewModel
+import com.example.miniapps.ui.AppDrawer
+import com.example.miniapps.weather.WeatherScreen
+import com.example.miniapps.weather.WeatherViewModel
+import com.example.miniapps.weather.navigation.MenuItem
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
