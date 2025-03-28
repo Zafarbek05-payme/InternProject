@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
+// TODO = viewModel() -> hiltViewModel()
 @Composable
 fun SWScreen(viewModel: SWViewModel = viewModel()) {
     val time by viewModel.time

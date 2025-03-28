@@ -5,4 +5,5 @@ sealed class Screens (
 ){
     data object Weather: Screens("weather")
     data object Stopwatch: Screens("stopwatch")
+    data object News: Screens("news")
 }

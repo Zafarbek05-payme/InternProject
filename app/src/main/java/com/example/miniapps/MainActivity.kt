@@ -6,16 +6,18 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material.Surface
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.miniapps.ui.NavDrawer
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+
+            // TODO StopwatchTheme
+
             MaterialTheme{
                 Surface(
                     color = MaterialTheme.colorScheme.background
@@ -27,10 +29,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview
-@Composable
-fun PreviewNav(modifier: Modifier = Modifier) {
-    NavDrawer()
-}
+//@Preview
+//@Composable
+//fun PreviewNav(modifier: Modifier = Modifier) {
+//    NavDrawer()
+//}
 
 

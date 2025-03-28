@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
  import androidx.navigation.compose.NavHost
  import androidx.navigation.compose.composable
  import androidx.navigation.compose.rememberNavController
+ import com.example.miniapps.apps.news.presentation.NewsScreen
  import com.example.miniapps.apps.stopwatch.SWScreen
  import com.example.miniapps.apps.weather.WeatherScreen
  import com.example.miniapps.navigation.Screens
@@ -88,6 +89,19 @@ fun NavDrawer(modifier: Modifier = Modifier) {
                         }
                     }
                 )
+                NavigationDrawerItem(
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                    label = { Text("News") },
+                    selected = false,
+                    onClick = {
+                        coroutineScope.launch {
+                            drawerState.close()
+                        }
+                        navController.navigate(Screens.News.screen){
+                            popUpTo(0)
+                        }
+                    }
+                )
             }
         }
     ) {
@@ -112,10 +126,11 @@ fun NavDrawer(modifier: Modifier = Modifier) {
         ) {
             NavHost(
                 navController = navController,
-                startDestination = Screens.Stopwatch.screen
+                startDestination = Screens.Weather.screen
             ){
-                composable(Screens.Stopwatch.screen){ SWScreen()}
+                composable(Screens.Stopwatch.screen){ SWScreen() }
                 composable(Screens.Weather.screen){ WeatherScreen() }
+                composable(Screens.News.screen){ NewsScreen() }
             }
         }
     }
