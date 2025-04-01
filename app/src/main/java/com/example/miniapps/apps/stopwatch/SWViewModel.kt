@@ -20,7 +20,7 @@ class SWViewModel : ViewModel() {
     var isRunning = mutableStateOf(false)
     var lapsList = MutableStateFlow<MutableList<String>>(mutableListOf())
 
-    fun start(){
+    fun start() {
         if (!isRunning.value) {
             isRunning.value = true
             startTime = System.currentTimeMillis() - elapsedTime
@@ -34,12 +34,12 @@ class SWViewModel : ViewModel() {
         }
     }
 
-    fun stop(){
+    fun stop() {
         isRunning.value = false
         task?.cancel()
     }
 
-    fun reset(){
+    fun reset() {
         isRunning.value = false
         task?.cancel()
         elapsedTime = 0
@@ -47,7 +47,7 @@ class SWViewModel : ViewModel() {
     }
 
     fun addLap() {
-        if (isRunning.value){
+        if (isRunning.value) {
             val lapTime = System.currentTimeMillis() - startTime
             lapsList.value.add(formatTime(lapTime))
         }
@@ -55,7 +55,7 @@ class SWViewModel : ViewModel() {
 
     @SuppressLint("DefaultLocale")
     private fun formatTime(ms: Long): String {
-        val hours = ms/3600000
+        val hours = ms / 3600000
         val minutes = ms % 3600000 / 60000
         val seconds = ms % 60000 / 1000
         return String.format("%02d:%02d:%02d", hours, minutes, seconds)

@@ -73,11 +73,11 @@ fun SWScreen(viewModel: SWViewModel = viewModel()) {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            if (lapList.isNotEmpty()){
-                for (lap in lapList){
+            if (lapList.isNotEmpty()) {
+                for (lap in lapList) {
                     Text("Lap ${lapList.indexOf(lap) + 1}: $lap")
                 }
-                Button(onClick = {lapList.clear()}) {
+                Button(onClick = { lapList.clear() }) {
                     Text("CLEAR LAPS")
                 }
             }

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.stopwatch"
-        minSdk = 24
+        minSdk = 33
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -69,12 +69,6 @@ dependencies {
     implementation(libs.androidx.activity.compose.v182)
     implementation(libs.androidx.material3.v120beta01)
 
-    //Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.converter.moshi)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.converter.gson)
-
     //LiveData
     implementation(libs.androidx.runtime.livedata)
 
@@ -89,10 +83,15 @@ dependencies {
     //Navigation
     implementation(libs.androidx.navigation.compose)
 
+    //Glide
+    implementation(libs.compose)
+
     //Dagger-Hilt
-    implementation("com.google.dagger:hilt-android:2.40.5")
+    implementation(libs.hilt.android)
 //    kapt("com.google.dagger:hilt-android-compiler:2.40.5")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    implementation(libs.androidx.hilt.lifecycle.viewmodel)
 //    kapt("androidx.hilt:hilt-compiler:1.0.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(project(":domain"))
 }

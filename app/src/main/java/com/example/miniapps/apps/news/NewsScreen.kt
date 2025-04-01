@@ -1,4 +1,4 @@
-package com.example.miniapps.apps.news.presentation
+package com.example.miniapps.apps.news
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

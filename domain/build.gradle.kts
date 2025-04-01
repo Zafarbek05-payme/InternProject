@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.data"
+    namespace = "com.example.domain"
     compileSdk = 35
 
     defaultConfig {
@@ -44,9 +44,6 @@ dependencies {
     //Dagger-Hilt
     implementation("com.google.dagger:hilt-android:2.40.5")
 
-    //Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.converter.moshi)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.converter.gson)
+    implementation(project(":data"))
+
 }

@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Mini Apps"
 include(":app")
+include(":data")
+include(":domain")

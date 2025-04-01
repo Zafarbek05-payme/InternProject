@@ -1,4 +1,4 @@
-package com.example.miniapps.apps.stopwatch.theme
+package com.example.miniapps.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

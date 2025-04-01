@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.material.Surface
 import androidx.compose.material3.MaterialTheme
 import com.example.miniapps.ui.NavDrawer
+import com.example.miniapps.ui.theme.StopwatchTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,9 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
-            // TODO StopwatchTheme
-
-            MaterialTheme{
+            StopwatchTheme {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ){
